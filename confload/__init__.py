@@ -6,7 +6,7 @@ class Config:
 
     @staticmethod
     def load(file: str):
-        Config.parser.clear()
+        Config.parser = configparser.ConfigParser()
         Config.parser.read(file)
 
     @staticmethod
