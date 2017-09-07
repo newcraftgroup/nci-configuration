@@ -5,6 +5,10 @@ class Config:
     parser = configparser.ConfigParser()
 
     @staticmethod
+    def load(file: str):
+        Config.parser.read(file)
+
+    @staticmethod
     def ready() -> bool:
         return len(Config.parser.sections()) > 0
 
