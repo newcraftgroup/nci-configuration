@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ConfLoad',
-    version='1.0.7',
+    version='1.0.8',
     description='Configuration file loader and parser',
     long_description=open('README.md').read(),
     author='Newcraft',

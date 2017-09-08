@@ -6,7 +6,7 @@ from confload.yaml import YamlConfig
 
 
 class Config:
-    _instance: Union[IniConfig, JsonConfig, YamlConfig] = IniConfig
+    _instance: Union[IniConfig, JsonConfig, YamlConfig] = None
 
     def __init__(self, file):
         Config.load(file)
