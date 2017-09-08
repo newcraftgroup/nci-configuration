@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ConfLoad',
-    version='1.0.5',
+    version='1.0.6',
     description='Configuration file loader and parser',
     long_description=open('README.md').read(),
     author='Newcraft',
@@ -17,4 +17,5 @@ setup(
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 3'
                  ],
+    install_requires=["PyYAML"]
 )
