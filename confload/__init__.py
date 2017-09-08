@@ -17,7 +17,7 @@ class Config:
             Config._instance = IniConfig
         if "json" in file:
             Config._instance = JsonConfig
-        if "yaml" in file:
+        if "yaml" in file or "yml" in file:
             Config._instance = YamlConfig
 
         Config._instance.load(file)
