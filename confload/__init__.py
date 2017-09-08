@@ -24,7 +24,7 @@ class Config:
 
     @staticmethod
     def ready():
-        return Config._instance.ready()
+        return Config._instance is not None and Config._instance.ready()
 
     @staticmethod
     def get(section) -> dict:
