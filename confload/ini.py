@@ -1,15 +1,13 @@
 import configparser
 
-from confload import Config
-
 
 class IniConfig:
     parser = configparser.ConfigParser()
 
     @staticmethod
     def load(file: str):
-        Config.parser = configparser.ConfigParser()
-        Config.parser.read(file)
+        IniConfig.parser = configparser.ConfigParser()
+        IniConfig.parser.read(file)
 
     @staticmethod
     def ready() -> bool:

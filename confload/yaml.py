@@ -1,7 +1,5 @@
 import yaml
 
-from confload import IniConfig
-
 
 class YamlConfig:
     data = {}
@@ -13,7 +11,7 @@ class YamlConfig:
 
     @staticmethod
     def ready() -> bool:
-        return len(IniConfig.parser.sections()) > 0
+        return len(YamlConfig.data) > 0
 
     @staticmethod
     def get(section) -> dict:

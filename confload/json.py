@@ -1,7 +1,5 @@
 import json
 
-from confload import IniConfig
-
 
 class JsonConfig:
     data = {}
@@ -13,7 +11,7 @@ class JsonConfig:
 
     @staticmethod
     def ready() -> bool:
-        return len(IniConfig.parser.sections()) > 0
+        return len(JsonConfig.data) > 0
 
     @staticmethod
     def get(section) -> dict:
