@@ -1,28 +1,31 @@
-import configparser
+from typing import Union
+
+from confload.ini import IniConfig
+from confload.json import JsonConfig
+from confload.yaml import YamlConfig
 
 
 class Config:
-    parser = configparser.ConfigParser()
+    _instance: Union[IniConfig, JsonConfig, YamlConfig] = IniConfig
+
+    def __init__(self, file):
+        Config.load(file)
 
     @staticmethod
     def load(file: str):
-        Config.parser = configparser.ConfigParser()
-        Config.parser.read(file)
+        if "ini" in file:
+            Config._instance = IniConfig
+        if "json" in file:
+            Config._instance = JsonConfig
+        if "yaml" in file:
+            Config._instance = YamlConfig
+
+        Config._instance.load(file)
 
     @staticmethod
-    def ready() -> bool:
-        return len(Config.parser.sections()) > 0
+    def ready():
+        return Config._instance.ready()
 
     @staticmethod
     def get(section) -> dict:
-        dict1 = {}
-        options = Config.parser.options(section)
-        for option in options:
-            try:
-                dict1[option] = Config.parser.get(section, option)
-                if dict1[option] == -1:
-                    print("skip: %s" % option)
-            except:
-                print("exception on %s!" % option)
-                dict1[option] = None
-        return dict1
+        return Config._instance.get(section)
