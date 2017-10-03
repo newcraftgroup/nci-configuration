@@ -31,6 +31,7 @@ GoogleAnalytics:
 "GoogleAnalytics": {
   "user" : "myusername"
   "password" : "mypassword"
+}
 ```
 
 You can access the GoogleAnalytics user in your application using this line:
