@@ -28,9 +28,9 @@ GoogleAnalytics:
 ```
 
 ```json
-"GoogleAnalytics": {
-  "user" : "myusername"
-  "password" : "mypassword"
+"GoogleAnalytics":{  
+  "user":"myusername",
+  "password":"mypassword"
 }
 ```
 
