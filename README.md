@@ -1,5 +1,5 @@
 # nci-config-loader
-A simple library to handle ini configuration files within your projects
+A simple library to handle ini, yaml and json configuration files within your projects
 
 ## Usage
 
@@ -8,16 +8,29 @@ Every aspect of the Config class is statically defined; This means that once ini
 ### Loading a config file:
 ```python
 if not Config.ready():
-  Config.parser.read("config.ini")
+  Config.load("config.ini")
 ```
 
 ### Accessing data
-Given this config.ini file:
+
+#### INI
+Given one of these config files:
 ```ini
 [GoogleAnalytics]
 user : myusername
 password : mypassword
-...
+```
+
+```yaml
+GoogleAnalytics:
+  user : myusername
+  password : mypassword
+```
+
+```json
+"GoogleAnalytics": {
+  "user" : "myusername"
+  "password" : "mypassword"
 ```
 
 You can access the GoogleAnalytics user in your application using this line:
