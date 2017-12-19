@@ -16,7 +16,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nci-config-loader',
-    version='1.0.11',
+    version='1.0.12',
     description='Configuration file loader and parser',
     author='Newcraft',
     author_email='cedric.le.varlet@newcraftgroup.com',
@@ -26,7 +26,7 @@ setup(
     packages=find_packages(),
     classifiers=['Development Status :: 4 - Beta',
                  'Intended Audience :: Developers',
-                 'License :: OSI Approved :: MIT License',
+                 'License :: OSI Approved :: Apache License',
                  'Operating System :: OS Independent',
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 3'
