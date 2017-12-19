@@ -18,7 +18,6 @@ setup(
     name='nci-config-loader',
     version='1.0.10',
     description='Configuration file loader and parser',
-    long_description=open('README.md').read(),
     author='Newcraft',
     author_email='cedric.le.varlet@newcraftgroup.com',
     url='https://github.com/newcraftgroup/nci-python-config',
