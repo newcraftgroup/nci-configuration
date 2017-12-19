@@ -22,11 +22,10 @@ setup(
     author_email='cedric.le.varlet@newcraftgroup.com',
     url='https://github.com/newcraftgroup/nci-python-config',
     download_url='https://github.com/newcraftgroup/nci-python-config/tarball/master',
-    license='Apache',
+    license='Apache License, Version 2.0',
     packages=find_packages(),
     classifiers=['Development Status :: 4 - Beta',
                  'Intended Audience :: Developers',
-                 'License :: OSI Approved :: Apache License',
                  'Operating System :: OS Independent',
                  'Programming Language :: Python',
                  'Programming Language :: Python :: 3'
